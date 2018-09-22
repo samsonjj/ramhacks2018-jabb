@@ -1,0 +1,44 @@
+{
+data: [
+[
+"{ "ResponseMetadata": { "HTTPHeaders": { "connection": "keep-alive", "content-length": "163", "content-type": "application/x-amz-json-1.1", "date": "Sat, 22 Sep 2018 20:32:16 GMT", "x-amzn-requestid": "989414a8-bea6-11e8-a50b-19eb8729d8e4" }, "HTTPStatusCode": 200, "RequestId": "989414a8-bea6-11e8-a50b-19eb8729d8e4", "RetryAttempts": 0 }, "Sentiment": "NEUTRAL", "SentimentScore": { "Mixed": 0.004137126728892326, "Negative": 0.14273102581501007, "Neutral": 0.8525936007499695, "Positive": 0.0005381934461183846 } }",
+"@_LoveLike_JESUS So this is how victims of sexual assault were treated in the 1970's. Trump didn't bring back coal,… https://t.co/GCkocRNSxk"
+],
+[
+"{ "ResponseMetadata": { "HTTPHeaders": { "connection": "keep-alive", "content-length": "164", "content-type": "application/x-amz-json-1.1", "date": "Sat, 22 Sep 2018 20:32:16 GMT", "x-amzn-requestid": "989ffbd4-bea6-11e8-abb0-3768c44029ed" }, "HTTPStatusCode": 200, "RequestId": "989ffbd4-bea6-11e8-abb0-3768c44029ed", "RetryAttempts": 0 }, "Sentiment": "NEUTRAL", "SentimentScore": { "Mixed": 0.0038492491003125906, "Negative": 0.11668126285076141, "Neutral": 0.8789752125740051, "Positive": 0.0004942349623888731 } }",
+"Dem politicians trying to scare Trump to death, literally. Trying to force him to resign. https://t.co/tDe5OOySkF"
+],
+[
+"{ "ResponseMetadata": { "HTTPHeaders": { "connection": "keep-alive", "content-length": "160", "content-type": "application/x-amz-json-1.1", "date": "Sat, 22 Sep 2018 20:32:17 GMT", "x-amzn-requestid": "98a63c87-bea6-11e8-81f0-259418ac58fd" }, "HTTPStatusCode": 200, "RequestId": "98a63c87-bea6-11e8-81f0-259418ac58fd", "RetryAttempts": 0 }, "Sentiment": "NEUTRAL", "SentimentScore": { "Mixed": 0.004824078641831875, "Negative": 0.191898375749588, "Neutral": 0.802321195602417, "Positive": 0.0009564000065438449 } }",
+"RT @PatrickW: Walmart on tariffs: "Either consumers will pay more, suppliers will receive less, retail margins will be lower, or consumers…"
+],
+[
+"{ "ResponseMetadata": { "HTTPHeaders": { "connection": "keep-alive", "content-length": "164", "content-type": "application/x-amz-json-1.1", "date": "Sat, 22 Sep 2018 20:32:17 GMT", "x-amzn-requestid": "98b04eaa-bea6-11e8-9d4c-ffa8cbab4b65" }, "HTTPStatusCode": 200, "RequestId": "98b04eaa-bea6-11e8-9d4c-ffa8cbab4b65", "RetryAttempts": 0 }, "Sentiment": "NEUTRAL", "SentimentScore": { "Mixed": 0.0026555005460977554, "Negative": 0.020460499450564384, "Neutral": 0.973894476890564, "Positive": 0.002989528700709343 } }",
+"Trump should drop Kavanaugh and nominate Jason Miller for SCOTUS"
+],
+[
+"{ "ResponseMetadata": { "HTTPHeaders": { "connection": "keep-alive", "content-length": "165", "content-type": "application/x-amz-json-1.1", "date": "Sat, 22 Sep 2018 20:32:17 GMT", "x-amzn-requestid": "98b8658b-bea6-11e8-b073-b1fa867ff126" }, "HTTPStatusCode": 200, "RequestId": "98b8658b-bea6-11e8-b073-b1fa867ff126", "RetryAttempts": 0 }, "Sentiment": "NEUTRAL", "SentimentScore": { "Mixed": 0.0013089345302432775, "Negative": 0.004978283308446407, "Neutral": 0.9925277233123779, "Positive": 0.001185077358968556 } }",
+"RT @JonLemire: President Donald Trump held a rally in Las Vegas tonight three miles from the Mandalay Bay hotel where a gunman opened fire…"
+],
+[
+"{ "ResponseMetadata": { "HTTPHeaders": { "connection": "keep-alive", "content-length": "164", "content-type": "application/x-amz-json-1.1", "date": "Sat, 22 Sep 2018 20:32:17 GMT", "x-amzn-requestid": "98cd748d-bea6-11e8-90b7-1541de4dfaf2" }, "HTTPStatusCode": 200, "RequestId": "98cd748d-bea6-11e8-90b7-1541de4dfaf2", "RetryAttempts": 0 }, "Sentiment": "NEUTRAL", "SentimentScore": { "Mixed": 0.035207632929086685, "Negative": 0.018091626465320587, "Neutral": 0.9099330306053162, "Positive": 0.036767687648534775 } }",
+"RT @AynRandPaulRyan: Note: This guy works for a party that nominated a #SCOTUS judge in order to make abortion illegal. Former senior Trum…"
+],
+[
+"{ "ResponseMetadata": { "HTTPHeaders": { "connection": "keep-alive", "content-length": "161", "content-type": "application/x-amz-json-1.1", "date": "Sat, 22 Sep 2018 20:32:17 GMT", "x-amzn-requestid": "98d4edb7-bea6-11e8-9336-b52f4e6406d3" }, "HTTPStatusCode": 200, "RequestId": "98d4edb7-bea6-11e8-9336-b52f4e6406d3", "RetryAttempts": 0 }, "Sentiment": "NEUTRAL", "SentimentScore": { "Mixed": 0.04912624880671501, "Negative": 0.4105832576751709, "Neutral": 0.5291712284088135, "Positive": 0.011119255796074867 } }",
+"RT @RWPUSA: Pastor Pagitt gets this right. This Administration and it’s enablers in Congress have completely abandoned Christian principle…"
+],
+[
+"{ "ResponseMetadata": { "HTTPHeaders": { "connection": "keep-alive", "content-length": "162", "content-type": "application/x-amz-json-1.1", "date": "Sat, 22 Sep 2018 20:32:17 GMT", "x-amzn-requestid": "98dcb636-bea6-11e8-8dd8-1509aae11eca" }, "HTTPStatusCode": 200, "RequestId": "98dcb636-bea6-11e8-8dd8-1509aae11eca", "RetryAttempts": 0 }, "Sentiment": "NEUTRAL", "SentimentScore": { "Mixed": 0.011011586524546146, "Negative": 0.26794180274009705, "Neutral": 0.720207691192627, "Positive": 0.0008389113354496658 } }",
+"RT @billmaher: If there was a nutrition label on Trump's ass it would say 35% Fat 65% Narcissistic Personality Disorder. https://t.co/Ca9y…"
+],
+[
+"{ "ResponseMetadata": { "HTTPHeaders": { "connection": "keep-alive", "content-length": "164", "content-type": "application/x-amz-json-1.1", "date": "Sat, 22 Sep 2018 20:32:17 GMT", "x-amzn-requestid": "98e2d0d6-bea6-11e8-81c0-75609a4d3cc9" }, "HTTPStatusCode": 200, "RequestId": "98e2d0d6-bea6-11e8-81c0-75609a4d3cc9", "RetryAttempts": 0 }, "Sentiment": "NEUTRAL", "SentimentScore": { "Mixed": 0.0036288672126829624, "Negative": 0.008175786584615707, "Neutral": 0.9609184861183167, "Positive": 0.02727690152823925 } }",
+"Fresh from the Novartis/Trump scandal, ex-CEO Joe Jimenez jumps on the board of uBiome — a #biotech launching an R&amp;… https://t.co/v9F3IXSmt0"
+],
+[
+"{ "ResponseMetadata": { "HTTPHeaders": { "connection": "keep-alive", "content-length": "164", "content-type": "application/x-amz-json-1.1", "date": "Sat, 22 Sep 2018 20:32:17 GMT", "x-amzn-requestid": "98e91221-bea6-11e8-9049-1d94ed5dcc6d" }, "HTTPStatusCode": 200, "RequestId": "98e91221-bea6-11e8-9049-1d94ed5dcc6d", "RetryAttempts": 0 }, "Sentiment": "NEUTRAL", "SentimentScore": { "Mixed": 0.005155821796506643, "Negative": 0.08635852485895157, "Neutral": 0.9074558615684509, "Positive": 0.0010298434644937515 } }",
+"RT @TalbertSwan: To those who were offended by my tweet regarding 53% of white women who voted 4 Trump, 63% of white women who voted 4 Roy…"
+]
+]
+}
