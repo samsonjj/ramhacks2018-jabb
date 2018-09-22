@@ -14,9 +14,30 @@ from textblob import TextBlob
 import boto3
 import json
 
+import pymongo;
+import dns;
+
+import pprint;
+
 
 app = Flask(__name__)
 api = Api(app)
+#mongodb+srv://<USERNAME>:<PASSWORD>@jabbcluster-sgjuz.mongodb.net/test?retryWrites=true
+#client = pymongo.MongoClient("mongodb+srv://kay:myRealPassword@cluster0.mongodb.net/test");
+client = pymongo.MongoClient("mongodb+srv://samsonjj:password123!@jabbcluster-sgjuz.mongodb.net/test?retryWrites=true");
+db = client.sentiment;
+
+tweetDetails = db.tweetDetails;
+
+detail = {
+    "author": "Jonathan Samson"
+}
+
+post_id = tweetDetails.insert_one(detail).inserted_id;
+
+pprint.pprint(tweetDetails.find_one());
+
+
 
 def hello(search_term):
     comprehend = boto3.client(service_name='comprehend', region_name='us-east-1')
