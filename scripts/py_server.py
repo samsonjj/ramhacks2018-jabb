@@ -14,30 +14,19 @@ from textblob import TextBlob
 import boto3
 import json
 
-import pymongo;
-import dns;
+import pymongo
+import dns
 
-import pprint;
+import pprint
 
+from bson import json_util, ObjectId
 
 app = Flask(__name__)
 api = Api(app)
-#mongodb+srv://<USERNAME>:<PASSWORD>@jabbcluster-sgjuz.mongodb.net/test?retryWrites=true
-#client = pymongo.MongoClient("mongodb+srv://kay:myRealPassword@cluster0.mongodb.net/test");
 client = pymongo.MongoClient("mongodb+srv://samsonjj:password123!@jabbcluster-sgjuz.mongodb.net/test?retryWrites=true");
-db = client.sentiment;
+db = client.sentiment
 
-tweetDetails = db.tweetDetails;
-
-detail = {
-    "author": "Jonathan Samson"
-}
-
-post_id = tweetDetails.insert_one(detail).inserted_id;
-
-pprint.pprint(tweetDetails.find_one());
-
-
+tweetDetails = db.tweetDetails
 
 def hello(search_term):
     comprehend = boto3.client(service_name='comprehend', region_name='us-east-1')
@@ -52,25 +41,57 @@ def hello(search_term):
     auth.set_access_token(access_token, access_token_secret)
     api = tweepy.API(auth)
 
+    #public_tweets = api.search(search_term, rpp=100, geocode=("37.5400,77.53000,1000km"))
     public_tweets = api.search(search_term)
 
-    print(len(public_tweets));
+    print(len(public_tweets))
 
-    someArray = [];
+    someArray = []
 
 
-    for i in range(0, min(10, len(public_tweets))):
+
+    for i in range(0, min(100, len(public_tweets))):
         #print("text: " + tweet.text)
         #analysis = TextBlob(tweet.text)
         #print("analysis: " + str(analysis))
-        #rint("sentiment: " + str(analysis.sentiment))
+        #rint("sentiment: " + str(analysis.sentiment))+
 
-        someArray.append((json.dumps(comprehend.detect_sentiment(Text=public_tweets[i].text, LanguageCode='en'), sort_keys=True, indent=4), public_tweets[i].text));
+        pprint.pprint(public_tweets[i]);
+        sentiment = json.loads(json.dumps(comprehend.detect_sentiment(Text=public_tweets[i].text, LanguageCode='en'), sort_keys=True, indent=4))
 
-    return someArray;
+        pprint.pprint(sentiment.keys())
+
+        object = {
+            'sentiment_data': {
+                'positive': sentiment['SentimentScore']['Positive'],
+                'neutral': sentiment['SentimentScore']['Neutral'],
+                'negative': sentiment['SentimentScore']['Negative'],
+                'mixed': sentiment['SentimentScore']['Mixed'],
+                'sentiment': sentiment['Sentiment']
+            },
+            'tid': public_tweets[i].id,
+            'text': public_tweets[i].text
+        }
+
+        tweetExists = tweetDetails.find_one({'tid': object['tid']})
+
+        if tweetExists == None:
+            print("this one was none")
+            tweetDetails.insert_one(object)
+
+        someArray.append(object);
+
+    return someArray
 
 
-class Thing(Resource):
+class Get(Resource):
+    def get(self, search_term):
+        result = {
+            'data': hello(search_term)
+        }
+        return json.loads(json_util.dumps(result))
+
+class Store(Resource):
     def get(self, search_term):
         result = {
             'data': hello(search_term)
@@ -78,7 +99,8 @@ class Thing(Resource):
         return jsonify(result)
 
 
-api.add_resource(Thing, '/sentiment/<search_term>')  # Route_1
+api.add_resource(Get, '/sentiment/<search_term>')  # Route_1
+api.add_resource(Store, '/sentiment/store/<search_term>')
 
 if __name__ == '__main__':
     app.run(port='5002')
