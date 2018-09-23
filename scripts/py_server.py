@@ -42,22 +42,20 @@ def hello(search_term):
     api = tweepy.API(auth)
 
     #public_tweets = api.search(search_term, rpp=100, geocode=("37.5400,77.53000,1000km"))
-    public_tweets = api.search(search_term)
-
-    print(len(public_tweets))
+    public_tweets = tweepy.Cursor(api.search, q=search_term).items(200)
 
     someArray = []
 
 
 
-    for i in range(0, min(100, len(public_tweets))):
+    for tweet in public_tweets:
         #print("text: " + tweet.text)
         #analysis = TextBlob(tweet.text)
         #print("analysis: " + str(analysis))
         #rint("sentiment: " + str(analysis.sentiment))+
 
-        pprint.pprint(public_tweets[i]);
-        sentiment = json.loads(json.dumps(comprehend.detect_sentiment(Text=public_tweets[i].text, LanguageCode='en'), sort_keys=True, indent=4))
+        pprint.pprint(tweet);
+        sentiment = json.loads(json.dumps(comprehend.detect_sentiment(Text=tweet.text, LanguageCode='en'), sort_keys=True, indent=4))
 
         pprint.pprint(sentiment.keys())
 
@@ -69,8 +67,8 @@ def hello(search_term):
                 'mixed': sentiment['SentimentScore']['Mixed'],
                 'sentiment': sentiment['Sentiment']
             },
-            'tid': public_tweets[i].id,
-            'text': public_tweets[i].text
+            'tid': tweet.id,
+            'text': tweet.text
         }
 
         tweetExists = tweetDetails.find_one({'tid': object['tid']})
